@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Estelar - Par de Pontos Mais Próximos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>RADAR ESTELAR</h1>
+        <p class="subtitle">Compare a eficiência de algoritmos para encontrar o par de estrelas mais próximo</p>
+        
+        <canvas id="starCanvas" width="800" height="500"></canvas>
+        
+        <div id="results-panel" class="results-panel">
+            <p><strong>Última Execução:</strong> <span id="algorithm-used">N/A</span></p>
+            <p><strong>Distância Mínima:</strong> <span id="min-distance">N/A</span></p>
+            <p><strong>Cálculos de Distância:</strong> <span id="distance-calculations">N/A</span></p>
+        </div>
+
+        <div class="controls-main">
+            <button id="findPairDNCBtn">Rodar Divisão e Conquista (O(n log n))</button>
+            <button id="findPairBruteForceBtn">Rodar Força Bruta (O(n²))</button>
+        </div>
+        
+        <div class="controls-secondary">
+            <div class="random-generator">
+                <input type="number" id="random-points-input" value="50" min="2" max="500">
+                <button id="generateRandomBtn">Gerar Estrelas</button>
+            </div>
+            <button id="clearBtn">Limpar Radar</button>
+            <button id="aboutBtn">Sobre o Projeto</button>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sobre o Radar Estelar</h2>
+            
+            <h3>Como usar:</h3>
+            <p>1. Clique para adicionar estrelas ou use o "Gerador de Estrelas".</p>
+            <p>2. Escolha um dos algoritmos para rodar: "Divisão e Conquista" ou "Força Bruta".</p>
+            <p>3. Observe a linha que conecta o par mais próximo e compare os dados no painel de resultados.</p>
+            
+            <hr>
+            
+            <h3>O Algoritmo: Par de Pontos (Divisão e Conquista)</h3>
+            <p>
+                Este projeto usa um algoritmo clássico que opera em tempo <strong>O(n log n)</strong>. Ele divide o problema recursivamente:
+            </p>
+            <ol>
+                <li><strong>Dividir:</strong> O conjunto de pontos é dividido em duas metades (esquerda e direita) por uma linha vertical.</li>
+                <li><strong>Conquistar:</strong> O algoritmo encontra o par mais próximo em cada metade recursivamente. Seja a menor distância encontrada &delta;.</li>
+                <li><strong>Combinar:</strong> O passo mais importante. Um par mais próximo pode existir com um ponto na metade esquerda e outro na direita. O algoritmo verifica apenas os pontos em uma "faixa" de largura 2&delta; ao redor da linha de divisão, reduzindo drasticamente as comparações necessárias.</li>
+            </ol>
+            
+            <hr>
+
+            <h3>Desenvolvido por:</h3>
+            <ul class="authors">
+                <li><a href="https://github.com/rafgpereira" target="_blank">Rafael Pereira</a></li>
+                <li><a href="https://github.com/jlucasiqueira" target="_blank">João Lucas Siqueira</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
