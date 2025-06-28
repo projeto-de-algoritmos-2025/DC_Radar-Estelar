@@ -22,6 +22,10 @@ Além de reforçar conceitos de algoritmos e estruturas de dados, o Radar Estela
 
 Acesse: [Radar_Estelar](https://github.com/projeto-de-algoritmos-2025/DC_Radar-Estelar) 
 
+## Vídeo da Apresentação
+
+[Assistir Apresentação](https://youtu.be/owM9WC2kcFI)
+
 ## Screenshots
 <center>
 
