@@ -24,7 +24,7 @@ Acesse: [Radar_Estelar](https://github.com/projeto-de-algoritmos-2025/DC_Radar-E
 
 ## Vídeo da Apresentação
 
-[Assistir Apresentação](https://youtu.be/owM9WC2kcFI)
+[Assistir Apresentação](https://youtu.be/EEAeNSd_CXg)
 
 ## Screenshots
 <center>
